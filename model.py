@@ -1,4 +1,5 @@
 import math as m
+from tkinter import END
 
 class calcul:
     def multiplication(self, a, b):
@@ -12,7 +13,7 @@ class calcul:
 
     def division(self, a, b):
         if b == 0:
-            raise ValueError("Division by zero is not allowed.")
+            raise ValueError("Erreur")
         return a / b
 
     def racine(self, a):
@@ -44,3 +45,8 @@ class calcul:
     def tangente(self, a):
         return m.tan(a)
         
+    def effacacer_tout(self):
+        return number.delete(0, END())
+    
+    def effacer_derniere(self):
+        return number.delete(len(number.get())-1, END())
